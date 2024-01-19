@@ -9,7 +9,7 @@
 #define FDOWN 1
 
 /**
- * enum bool - Enumeration of Boolean values.
+ * enum boolean - Enumeration of Boolean values.
  * @false: Equals 0.
  * @true: Equals 1.
  */
@@ -20,7 +20,7 @@ typedef enum boolean
 } bool;
 
 /**
- * struct flistint_s - Doubly linked list node
+ * struct listint_s - Doubly linked list node
  *
  * @n: Integer stored in the node
  * @prev: Pointer to the previous element of the list
