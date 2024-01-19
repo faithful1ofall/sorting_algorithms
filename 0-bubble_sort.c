@@ -1,33 +1,47 @@
 #include "sort.h"
 
 /**
- * bubble_sort - perform sorting using bubble sort method by dividing.
- * @array: array to be sorted from the parameter.
- * @size: size of the array.
- * Return: nothing
- */
+ * swap - swap two values
+ * @a: first value
+ * @b: second value
+*/
+void swap(int *a, int *b)
+{
+	int tmp;
 
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+/**
+ * bubble_sort - sorts an array of integers in ascending order
+ *					using the Bubble sort algorithm
+ * @array: array to be sorted
+ * @size: size of the array
+ *
+ * Return: nothing
+*/
 void bubble_sort(int *array, size_t size)
 {
-	int swap_p, swapped_p;
-	size_t i;
+	size_t i, j;
+	int is_swapped = 0;
 
 	if (array == NULL || size < 2)
 		return;
-
-	while (swapped_p)
+	for (i = 0; i < size - 1; i++)
 	{
-		swapped_p = 0;
-		for (i = 0; i < size - 1; i++)
+		for (j = 0; j < size - i; j++)
 		{
-			if (array[i] > array[i + 1])
+			if (array[j] < array[j - 1])
 			{
-				swapped_p = 1;
-				swap_p = array[i + 1];
-				array[i + 1] = array[i];
-				array[i] = swap_p;
+				swap(&array[j], &array[j - 1]);
+				is_swapped = 1;
 				print_array(array, size);
 			}
 		}
+		if (is_swapped == 0)
+			break;
+		is_swapped = 0;
 	}
 }
