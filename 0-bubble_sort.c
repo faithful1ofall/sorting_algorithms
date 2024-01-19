@@ -1,6 +1,6 @@
 /*
  * File: 0-bubble_sort.c
- * Auth: fair
+ * Auth: fairhjhhyd hello
  */
 
 #include "sort.h"
