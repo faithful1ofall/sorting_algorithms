@@ -38,7 +38,7 @@ void counting_sort(int *array, size_t size)
 	if (fsorted == NULL)
 		return;
 	fmax = get_max(array, size);
-	fcount = malloc(sizeof(int) * (max + 1));
+	fcount = malloc(sizeof(int) * (fmax + 1));
 	if (fcount == NULL)
 	{
 		free(fsorted);
